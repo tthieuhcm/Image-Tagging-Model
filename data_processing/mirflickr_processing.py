@@ -4,6 +4,10 @@
 """
 For processing Mirflickr25k dataset only
 
+M. J. Huiskes, M. S. Lew (2008).
+The MIR Flickr Retrieval Evaluation.
+ACM International Conference on Multimedia Information Retrieval (MIR'08), Vancouver, Canada
+
 Short description:
 Mirflickr25k dataset has 25000 images with 24 tags and 14 tags of them are ground truth.
 Therefore this dataset has 24 files as 24 tags and 14 files in addition as ground truth.
