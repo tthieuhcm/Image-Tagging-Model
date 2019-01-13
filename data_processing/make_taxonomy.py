@@ -14,24 +14,22 @@ import re
 
 fname = "mirflickr_labels.txt"
 fhand = open(fname)
-AllWords = list()
-ResultList = list()
+all_tags = list()
+tag_list = list()
 
 regex = re.compile('(.*)?.jpg')
 
 for line in fhand:
-    line.rstrip()
     words = line.split()
-    filtered = filter(lambda i: not regex.search(i), words)
     filtered = [i for i in words if not regex.search(i)]
-    AllWords.extend(filtered)
+    all_tags.extend(filtered)
 
-AllWords.sort()
+all_tags.sort()
 
-for word in AllWords:
-    if word not in ResultList:
-        ResultList.append(word)
+for word in all_tags:
+    if word not in tag_list:
+        tag_list.append(word)
 
 tag_file = open("taxonomy.txt", "w")
-for item in ResultList:
+for item in tag_list:
     tag_file.write("%s\n" % item)
