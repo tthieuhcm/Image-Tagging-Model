@@ -11,79 +11,16 @@ from numpy import array
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader
 from torchvision import transforms, utils, models
 import torch.nn as nn
 import torch
 import torch.optim as optim
 from torch.optim import lr_scheduler
 from tqdm import tqdm
+from torch.autograd import Variable
 
-
-class MIR_FLICKR_Dataset(Dataset):
-    """MIR-Flickr-25K dataset."""
-
-    def __init__(self, img_name, img_labels, root_dir, transform=None):
-        """
-        Args:
-            img_name (ndarray): Images' name.
-            img_labels (ndarray): List of the images' tags.
-            root_dir (string): Directory with all the images.
-            transform (callable, optional): Optional transform to be applied
-                on a sample.
-        """
-        self.img_name = img_name
-        self.img_labels = img_labels
-        self.root_dir = root_dir
-        self.transform = transform
-
-    def __len__(self):
-        return len(self.img_name)
-
-    def __getitem__(self, idx):
-        image_name = os.path.join(self.root_dir,
-                                  self.img_name[idx])
-        image = Image.open(image_name).convert('RGB')
-        image_labels = self.img_labels[idx]
-        sample = {'image': image, 'labels': image_labels}
-
-        if self.transform:
-            sample = {'image': self.transform(sample['image']), 'labels': image_labels}
-
-        return sample
-
-
-class ImageNet_Dataset(Dataset):
-    """MIR-Flickr-25K dataset."""
-
-    def __init__(self, img_name, img_labels, root_dir, transform=None):
-        """
-        Args:
-            img_name (ndarray): Images' name.
-            img_labels (ndarray): List of the images' tags.
-            root_dir (string): Directory with all the images.
-            transform (callable, optional): Optional transform to be applied
-                on a sample.
-        """
-        self.img_name = img_name
-        self.img_labels = img_labels
-        self.root_dir = root_dir
-        self.transform = transform
-
-    def __len__(self):
-        return len(self.img_name)
-
-    def __getitem__(self, idx):
-        image_name = os.path.join(self.root_dir,
-                                  self.img_name[idx])
-        image = Image.open(image_name).convert('RGB')
-        image_labels = self.img_labels[idx]
-        sample = {'image': image, 'labels': image_labels}
-
-        if self.transform:
-            sample = {'image': self.transform(sample['image']), 'labels': image_labels}
-
-        return sample
+from dataloader import MIR_FLICKR_Dataset
 
 
 def show_batch(sample_batched):
@@ -106,8 +43,9 @@ def show_image(img):
 def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=25):
     since = time.time()
 
-    best_model_wts = copy.deepcopy(model.state_dict())
     best_loss = 100.0
+    train_error_list = list()
+    val_error_list = list()
 
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
@@ -150,25 +88,29 @@ def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=2
             epoch_loss = running_loss / len(dataloader)
 
             print('{} Loss: {:.4f}'.format(phase, epoch_loss))
-
+            if phase == 'train':
+                train_error_list.append(epoch_loss)
+            else:
+                val_error_list.append(epoch_loss)
             # deep copy the model
             if phase == 'val' and epoch_loss < best_loss:
                 best_loss = epoch_loss
-                torch.save(model.state_dict(), './models/densenet121+conv0+norm0+dl16conv2+dlnorm2+FC+Sigmoid+BCE-{}.ckpt'.format(epoch + 1 + 20))
+                torch.save(model.state_dict(), './models/densenet121+conv0+norm0+dl16conv2+dlnorm2+FC+Sigmoid+BCE-{}.ckpt'.format(epoch + 1))
 
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
     print('Best val Acc: {:4f}'.format(best_loss))
+    print('Train_error_list:', train_error_list)
+    print('Val_error_list:', val_error_list)
 
     # load best model weights
     # model.load_state_dict(best_model_wts)
     # return model
 
 
-def visualize_model(model, dataloader, num_images=4):
+def visualize_model(device, model, tag_list, dataloader, num_images=4):
     was_training = model.training
     model.eval()
-    images_so_far = 0
     fig = plt.figure()
 
     with torch.no_grad():
@@ -176,7 +118,11 @@ def visualize_model(model, dataloader, num_images=4):
             inputs, labels = sample_batched['image'].to(device), sample_batched['labels']
 
             outputs = model(inputs)
-            preds = outputs.round().type(torch.IntTensor).cpu().numpy()
+            threshold = 0.3
+            t = Variable(torch.Tensor([threshold])).to(device)
+            preds = (outputs > t).float() * 1
+            preds = preds.type(torch.IntTensor).cpu().numpy()
+            images_so_far = 0
 
             for j in range(inputs.size()[0]):
                 images_so_far += 1
@@ -198,7 +144,34 @@ def visualize_model(model, dataloader, num_images=4):
                     plt.axis('off')
                     plt.show()
                     model.train(mode=was_training)
-                    return
+                    # return
+        model.train(mode=was_training)
+
+
+def test_image(device, model, tag_list, image_path):
+    was_training = model.training
+    model.eval()
+    fig = plt.figure()
+    transform = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
+    image = Image.open(image_path).convert('RGB')
+    image = transform(image)
+
+    with torch.no_grad():
+        outputs = model(image.to(device).unsqueeze(0))
+        threshold = 0.3
+        t = Variable(torch.Tensor([threshold])).to(device)
+        preds = (outputs > t).float() * 1
+        preds = preds.type(torch.IntTensor).cpu().numpy()
+        ax = plt.subplot(4 // 2, 2, 1)
+        ax.axis('off')
+        pred_list = list()
+        for num_item, item in enumerate(preds.squeeze(0)):
+                if item != 0:
+                    pred_list.append(tag_list[item * num_item])
+        ax.set_title('predicted: {}'.format(pred_list))
+        show_image(image)
+        plt.axis('off')
+        plt.show()
         model.train(mode=was_training)
 
 
@@ -220,42 +193,42 @@ if __name__ == "__main__":
             for index in tag_index:
                 img_labels[i][index] = 1
 
-    train_split = .6
-    validation_split = .2
+    train_split = .7
+    validation_split = .15
 
     train = int(np.floor(train_split * number_of_images))
     validation = int(np.floor(validation_split * number_of_images))
 
-    mir_flickr_train = MIR_FLICKR_Dataset(img_name[:train], img_labels[:train],
+    mir_flickr_val = MIR_FLICKR_Dataset(img_name[train:train + validation], img_labels[:validation],
+                                        root_dir='/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/mirflickr',
+                                        transform=transforms.Compose([transforms.Resize((224, 224)),
+                                                                      # transform=transforms.Compose([transforms.Resize((256, 256)),
+                                                                      transforms.ToTensor()]))
+
+    mir_flickr_train = MIR_FLICKR_Dataset(img_name[:train], img_labels[validation:validation+train],
                                           root_dir='/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/mirflickr',
                                           transform=transforms.Compose([transforms.Resize((224, 224)),
                                                                         # transform=transforms.Compose([transforms.Resize((256, 256)),
 
                                                                         transforms.ToTensor()]))
 
-    mir_flickr_val = MIR_FLICKR_Dataset(img_name[train:train + validation], img_labels[train:train + validation],
-                                        root_dir='/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/mirflickr',
-                                        transform=transforms.Compose([transforms.Resize((224, 224)),
-                                                                      # transform=transforms.Compose([transforms.Resize((256, 256)),
-                                                                      transforms.ToTensor()]))
-
-    train_loader = DataLoader(mir_flickr_train, batch_size=2, shuffle=True, num_workers=4)
-    val_loader = DataLoader(mir_flickr_val, batch_size=2, shuffle=False, num_workers=4)
+    train_loader = DataLoader(mir_flickr_train, batch_size=32, shuffle=True, num_workers=4)
+    val_loader = DataLoader(mir_flickr_val, batch_size=32, shuffle=False, num_workers=4)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-    model_ft = models.densenet121(pretrained=True)
+    model_ft = models.densenet161(pretrained=True)
     num_ftrs = model_ft.classifier.in_features
     model_ft.classifier = nn.Linear(num_ftrs, number_of_tags)
     model = nn.Sequential(model_ft, nn.Sigmoid()).to(device)
 
-    model.load_state_dict(torch.load("models/densenet121+conv0+norm0+dl16conv2+dlnorm2+FC+Sigmoid+BCE-20.ckpt"))  # 0.7
+    # model.load_state_dict(torch.load("models/densenet121+conv0+norm0+dl16conv2+dlnorm2+FC+Sigmoid+BCE-44.ckpt"))  # 0.7
     for param in model[0].parameters():
         param.requires_grad = False
-    for param in model[0].features.conv0.parameters():
-        param.requires_grad = True
-    for param in model[0].features.norm0.parameters():
-        param.requires_grad = True
+    # for param in model[0].features.conv0.parameters():
+    #     param.requires_grad = True
+    # for param in model[0].features.norm0.parameters():
+    #     param.requires_grad = True
     for param in model[0].features.denseblock4.denselayer16.conv2.parameters():
         param.requires_grad = True
     for param in model[0].features.denseblock4.denselayer16.norm2.parameters():
@@ -267,6 +240,6 @@ if __name__ == "__main__":
 
     optimizer_ft = optim.Adam(model.parameters(), lr=0.0003)
 
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=10, gamma=0.5)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=30, gamma=0.1)
 
-    train_model(model, train_loader, val_loader, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=20)
+    train_model(model, train_loader, val_loader, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=1)
