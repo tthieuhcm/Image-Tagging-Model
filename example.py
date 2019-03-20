@@ -34,7 +34,7 @@ if __name__ == "__main__":
     num_ftrs = model_ft.classifier.in_features
     model_ft.classifier = nn.Linear(num_ftrs, number_of_tags)
     model = nn.Sequential(model_ft, nn.Sigmoid()).to(device)
-    model.load_state_dict(torch.load("models/densenet121-BCE-30.ckpt"))
+    model.load_state_dict(torch.load("models/densenet121-FocalLoss-33.ckpt"))
     was_training = model.training
     model.eval()
     map_dir = os.path.join(data_folder, 'devkit/data')
@@ -44,9 +44,10 @@ if __name__ == "__main__":
     with torch.no_grad():
         fig = plt.figure()
 
-        threshold = 0.5
-        path = '/home/tthieuhcm/Downloads/my_image/300px-Elephant_at_Indianapolis_Zoo.jpg'
-        image = default_loader(path)
+        threshold = 0.2
+        image_path = '/home/tthieuhcm/Downloads/my_image/toilet-tissue-roll-500x500.jpg'
+        # image_path = '/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/ILSVRC/Data/DET/train/ILSVRC2013_train/n00007846/n00007846_6247.JPEG'
+        image = default_loader(image_path)
         image = transforms(image)
 
         input = image.cuda().unsqueeze(0)
@@ -58,13 +59,15 @@ if __name__ == "__main__":
 
         for num_item, item in enumerate(preds[0]):
             if item != 0:
-                pred_list.append(inx_to_class[num_item])
+                tag_ID = inx_to_class[num_item]
+                tag_name = wordnet.synset_from_pos_and_offset('n', int(tag_ID[1:]))
+                print('tag: {}, confident: {}'.format(tag_name.lemmas()[0].name(), "%.4f" % outputs[0][num_item].item()))
 
-        for tag in pred_list:
-            tag_name = wordnet.synset_from_pos_and_offset('n', int(tag[1:]))
-            print(tag_name.lemmas()[0].name())
+        # for tag in pred_list:
+        #     tag_name = wordnet.synset_from_pos_and_offset('n', int(tag[1:]))
+        #     print(tag_name.lemmas()[0].name())
 
-        image = mpimg.imread(path)
+        image = mpimg.imread(image_path)
         plt.imshow(image)
 
         plt.axis('off')

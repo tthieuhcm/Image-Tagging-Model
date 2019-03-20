@@ -31,7 +31,7 @@ def wnid_to_tags(wnid):
     return list_of_tag
 
 
-def find_hypernyms_from_class_id(class_id, classes):
+def find_hypernyms_from_wnid(class_id, classes):
     """
     :param class_id: the main WordNet ID
     :param classes: list of all WordNet IDs
@@ -57,6 +57,32 @@ def find_hypernyms_from_class_id(class_id, classes):
     return classes
 
 
+def find_hypernyms_names_from_wnid(class_id):
+    """
+    :param class_id: the main WordNet ID
+    :return: All parents' name from the main WordNet IDs
+    """
+    classes_name = list()
+    tag = wordnet.synset_from_pos_and_offset('n', int(class_id[1:]))
+    tag_name = tag.lemma_names()[0]
+    while tag_name != 'plant' \
+            and tag_name != 'geological_formation' \
+            and tag_name != 'natural_object' \
+            and tag_name != 'sport' \
+            and tag_name != 'artifact' \
+            and tag_name != 'fungus' \
+            and tag_name != 'person' \
+            and tag_name != 'animal' \
+            and tag_name != 'communication' \
+            and tag_name != 'toilet_tissue' \
+            and tag_name != 'sphere' \
+            and tag_name != 'food':
+        tag = tag.hypernyms()[0]
+        tag_name = tag.lemma_names()[0]
+        classes_name.append(tag_name)
+    return classes_name
+
+
 def make_classes(map_dir):
     """
     :param map_dir: folder has map files
@@ -77,7 +103,7 @@ def make_classes(map_dir):
     classes.sort()
 
     for class_id in classes:
-        find_hypernyms_from_class_id(class_id, classes)
+        find_hypernyms_from_wnid(class_id, classes)
 
     classes.append('n00017222')
     classes.append('n03956922')

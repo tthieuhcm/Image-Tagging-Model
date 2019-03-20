@@ -14,7 +14,7 @@ from FocalLoss import FocalLoss
 from torch.autograd import Variable
 
 
-def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=90):
+def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=60):
 
     best_loss = float("inf")
     train_error_list = list()
@@ -28,7 +28,6 @@ def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=9
         # Each epoch has a training and validation phase
         for phase in ['train', 'val']:
             if phase == 'train':
-                continue
                 dataloader = train
                 if scheduler is not None:
                     scheduler.step()
@@ -80,8 +79,7 @@ def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=9
 
 
 if __name__ == "__main__":
-    number_of_tags = 1788
-    batch_size = 4
+    batch_size = 64
     num_worker = 4
     root_dir = './ILSVRC'
     root_dir = '/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/ILSVRC'
@@ -107,6 +105,8 @@ if __name__ == "__main__":
         num_workers=num_worker,
         pin_memory=True)
 
+    number_of_tags = len(train_dataset.classes)
+
     val_loader = torch.utils.data.DataLoader(
         ImageNet_Dataset(root_dir,
                          loader=default_loader,
@@ -115,8 +115,8 @@ if __name__ == "__main__":
                             transforms.CenterCrop(224),
                             transforms.ToTensor(),
                             normalize,
-        ]),
-        dataset_type='val'),
+                         ]),
+                         dataset_type='val'),
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_worker,
@@ -128,7 +128,6 @@ if __name__ == "__main__":
     num_ftrs = model_ft.classifier.in_features
     model_ft.classifier = nn.Linear(num_ftrs, number_of_tags)
     model = nn.Sequential(model_ft, nn.Sigmoid()).to(device)
-    # model.load_state_dict(torch.load("models/densenet121-FocalLoss-2.ckpt"))
 
     for param in model[0].parameters():
         param.requires_grad = False
@@ -141,14 +140,14 @@ if __name__ == "__main__":
     for param in model[0].classifier.parameters():
         param.requires_grad = True
 
-    criterion = FocalLoss(gamma=2, reduction='sum')
+    criterion = FocalLoss(gamma=2, alpha=1, reduction='sum')
     # criterion = nn.BCELoss(reduction='sum')
 
-    optimizer_ft = optim.SGD(model.parameters(), lr=0.1)
+    optimizer_ft = optim.SGD(model.parameters(), lr=0.02)
 
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=30, gamma=0.1)
 
-    train_model(model, train_loader, val_loader, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=90)
+    train_model(model, train_loader, val_loader, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=60)
 
     torch.save(model.state_dict(), './models/densenet121-FocalLoss-Final.ckpt')
 
