@@ -1,40 +1,9 @@
 from graphviz import Digraph
 from nltk.corpus import wordnet
 
+from tag_statistic import tag_statistic
 from utils import make_classes, find_hypernyms_names_from_wnid
-import numpy
 import os
-
-from torchvision.datasets.folder import default_loader
-from torchvision.transforms import transforms
-
-from dataloader import ImageNet_Dataset
-
-
-def tag_statistic(data_folder):
-    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                     std=[0.229, 0.224, 0.225])
-
-    train_dataset = ImageNet_Dataset(
-        data_folder,
-        loader=default_loader,
-        transform=transforms.Compose([
-            transforms.RandomResizedCrop(224),
-            transforms.RandomHorizontalFlip(),
-            transforms.ToTensor(),
-            normalize,
-        ]),
-        dataset_type='train')
-
-    tag = iter(train_dataset.classes)
-    init_count_of_tags = numpy.zeros(len(train_dataset.classes))
-    stat = dict(zip(tag, init_count_of_tags))
-
-    for item in train_dataset.samples:
-        for target in item[1].numpy():
-            stat[train_dataset.inx_to_class[target]] += 1
-
-    return stat
 
 
 def visualize_tree(root_name, data_folder, tag_stats):

@@ -105,33 +105,19 @@ def make_classes(map_dir):
     for class_id in classes:
         find_hypernyms_from_wnid(class_id, classes)
 
-    classes.append('n00017222')
-    classes.append('n03956922')
-    classes.append('n09287968')
-    classes.append('n00019128')
-    classes.append('n00021939')
-    classes.append('n12992868')
-    classes.append('n00007846')
-    classes.append('n00015388')
-    classes.append('n00033020')
-    classes.append('n15075141')
-    classes.append('n13899200')
-    classes.append('n00021265')
-    classes.append('n07555863')
-
-    # n00017222 : plant
-    # n03956922 : plant
-    # n09287968 : geological_formation
-    # n00019128 : natural_object
-    # n00021939 : artifact
-    # n12992868 : fungus
-    # n00007846 : person
-    # n00015388 : animal
-    # n00033020 : communication
-    # n15075141 : toilet_tissue
-    # n13899200 : sphere
-    # n00021265 : food
-    # n07555863 : food
+    classes.append('n00017222')    # n00017222 : plant
+    classes.append('n03956922')    # n03956922 : plant
+    classes.append('n09287968')    # n09287968 : geological_formation
+    classes.append('n00019128')    # n00019128 : natural_object
+    classes.append('n00021939')    # n00021939 : artifact
+    classes.append('n12992868')    # n12992868 : fungus
+    classes.append('n00007846')    # n00007846 : person
+    classes.append('n00015388')    # n00015388 : animal
+    classes.append('n00033020')    # n00033020 : communication
+    classes.append('n15075141')    # n15075141 : toilet_tissue
+    classes.append('n13899200')    # n13899200 : sphere
+    classes.append('n00021265')    # n00021265 : food
+    classes.append('n07555863')    # n07555863 : food
 
     classes = list(set(classes))
     classes.sort()

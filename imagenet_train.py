@@ -13,6 +13,8 @@ from dataloader import ImageNet_Dataset
 from FocalLoss import FocalLoss
 from torch.autograd import Variable
 
+from tag_statistic import make_class_weights
+
 
 def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=60):
 
@@ -140,8 +142,9 @@ if __name__ == "__main__":
     for param in model[0].classifier.parameters():
         param.requires_grad = True
 
-    criterion = FocalLoss(gamma=2, alpha=1, reduction='sum')
-    # criterion = nn.BCELoss(reduction='sum')
+    # criterion = FocalLoss(gamma=2, alpha=1, reduction='sum')
+    weight = torch.FloatTensor(make_class_weights(root_dir)).to(device)
+    criterion = nn.BCELoss(reduction='sum', weight=weight)
 
     optimizer_ft = optim.SGD(model.parameters(), lr=0.02)
 
