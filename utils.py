@@ -133,18 +133,19 @@ def make_CLS_LOC_dataset(CLS_LOC_data_dir, CLS_LOC_annotation_dir, class_to_idx,
         if not os.path.isdir(subdir):
             continue
 
+        list_target = wnid_to_tags(folder)
+
         for root, _, fnames in sorted(os.walk(subdir)):
             sorted(fnames)
-            if dataset_type == 'train':
-                fnames = fnames[100:]
-            elif dataset_type == 'test':
-                fnames = fnames[:100]
+            # if dataset_type == 'train':
+            #     fnames = fnames[100:]
+            # elif dataset_type == 'test':
+            #     fnames = fnames[:100]
 
             for fname in sorted(fnames):
                 path = os.path.join(root, fname)
-                list_target = wnid_to_tags(folder)
-
                 list_converted_target = list()
+
                 for target in list_target:
                     list_converted_target.append(class_to_idx[target])
 
@@ -159,6 +160,18 @@ def make_CLS_LOC_dataset(CLS_LOC_data_dir, CLS_LOC_annotation_dir, class_to_idx,
 def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_type):
     images = []
     annotation_dir = os.path.expanduser(DET_annotation_dir)
+    _0_object = 0
+    _1_object = 0
+    _2_object = 0
+    _3_object = 0
+    _4_object = 0
+    _5_object = 0
+    _6_object = 0
+    _7_object = 0
+    _8_object = 0
+    _9_object = 0
+    _10_object = 0
+    person = 0
     if dataset_type == 'val':
         for root, _, fnames in sorted(os.walk(annotation_dir)):
             sorted(fnames)
@@ -173,6 +186,30 @@ def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_typ
                     list_target.append(object.find('name').text)
 
                 list_target = list(set(list_target))
+                # if 'n00007846' in list_target:
+                #     person += 1
+                # if len(list_target) == 0:
+                #     _0_object += 1
+                # elif len(list_target) == 1:
+                #     _1_object += 1
+                # elif len(list_target) == 2:
+                #     _2_object += 1
+                # elif len(list_target) == 3:
+                #     _3_object += 1
+                # elif len(list_target) == 4:
+                #     _4_object += 1
+                # elif len(list_target) == 5:
+                #     _5_object += 1
+                # elif len(list_target) == 6:
+                #     _6_object += 1
+                # elif len(list_target) == 7:
+                #     _7_object += 1
+                # elif len(list_target) == 8:
+                #     _8_object += 1
+                # elif len(list_target) == 9:
+                #     _9_object += 1
+                # else:
+                #     _10_object += 1
                 extended_list_target = list()
                 for target in list_target:
                     extended_list_target = extended_list_target + wnid_to_tags(target)
@@ -200,10 +237,10 @@ def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_typ
 
                     for root, _, fnames in sorted(os.walk(ann_dir)):
                         sorted(fnames)
-                        if dataset_type == 'train':
-                            fnames = fnames[50:]
-                        elif dataset_type == 'test':
-                            fnames = fnames[:50]
+                        # if dataset_type == 'train':
+                        #     fnames = fnames[50:]
+                        # elif dataset_type == 'test':
+                        #     fnames = fnames[:50]
 
                         for fname in sorted(fnames):
                             image_path = os.path.join(image_dir, fname[:-3] + 'JPEG')
@@ -215,6 +252,30 @@ def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_typ
                                 list_target.append(object.find('name').text)
 
                             list_target = list(set(list_target))
+                            # if 'n00007846' in list_target:
+                            #     person += 1
+                            # if len(list_target) == 0:
+                            #     _0_object += 1
+                            # elif len(list_target) == 1:
+                            #     _1_object += 1
+                            # elif len(list_target) == 2:
+                            #     _2_object += 1
+                            # elif len(list_target) == 3:
+                            #     _3_object += 1
+                            # elif len(list_target) == 4:
+                            #     _4_object += 1
+                            # elif len(list_target) == 5:
+                            #     _5_object += 1
+                            # elif len(list_target) == 6:
+                            #     _6_object += 1
+                            # elif len(list_target) == 7:
+                            #     _7_object += 1
+                            # elif len(list_target) == 8:
+                            #     _8_object += 1
+                            # elif len(list_target) == 9:
+                            #     _9_object += 1
+                            # else:
+                            #     _10_object += 1
                             extended_list_target = list()
                             for target in list_target:
                                 extended_list_target = extended_list_target + wnid_to_tags(target)
@@ -232,10 +293,10 @@ def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_typ
             else:
                 for root, _, fnames in sorted(os.walk(ann_dir)):
                     sorted(fnames)
-                    if dataset_type == 'train':
-                        fnames = fnames[50:]
-                    elif dataset_type == 'test':
-                        fnames = fnames[:50]
+                    # if dataset_type == 'train':
+                    #     fnames = fnames[50:]
+                    # elif dataset_type == 'test':
+                    #     fnames = fnames[:50]
 
                     for fname in sorted(fnames):
                         image_path = os.path.join(image_dir, fname[:-3]+'JPEG')
@@ -247,6 +308,30 @@ def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_typ
                             list_target.append(object.find('name').text)
 
                         list_target = list(set(list_target))
+                        # if 'n00007846' in list_target:
+                        #     person += 1
+                        # if len(list_target) == 0:
+                        #     _0_object += 1
+                        # elif len(list_target) == 1:
+                        #     _1_object += 1
+                        # elif len(list_target) == 2:
+                        #     _2_object += 1
+                        # elif len(list_target) == 3:
+                        #     _3_object += 1
+                        # elif len(list_target) == 4:
+                        #     _4_object += 1
+                        # elif len(list_target) == 5:
+                        #     _5_object += 1
+                        # elif len(list_target) == 6:
+                        #     _6_object += 1
+                        # elif len(list_target) == 7:
+                        #     _7_object += 1
+                        # elif len(list_target) == 8:
+                        #     _8_object += 1
+                        # elif len(list_target) == 9:
+                        #     _9_object += 1
+                        # else:
+                        #     _10_object += 1
                         extended_list_target = list()
                         for target in list_target:
                             extended_list_target = extended_list_target + wnid_to_tags(target)
@@ -261,17 +346,30 @@ def make_DET_dataset(DET_data_dir, DET_annotation_dir, class_to_idx, dataset_typ
 
                         item = (image_path, pt_tensor_from_list)
                         images.append(item)
-
+    # print(person)
+    # print(_0_object)
+    # print(_1_object)
+    # print(_2_object)
+    # print(_3_object)
+    # print(_4_object)
+    # print(_5_object)
+    # print(_6_object)
+    # print(_7_object)
+    # print(_8_object)
+    # print(_9_object)
+    # print(_10_object)
     return images
 
 
 if __name__ == "__main__":
-    root = '/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/ILSVRC'
-    map_dir = os.path.join(root, 'devkit/data')
-    classes, class_to_idx = make_classes(map_dir)
+    # root = '/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/ILSVRC'
+    # map_dir = os.path.join(root, 'devkit/data')
+    # classes, class_to_idx = make_classes(map_dir)
+    #
+    # DET_image_dir = os.path.join(root, 'Data/DET/val')
+    # DET_annotation_dir = os.path.join(root, 'Annotations/DET/val')
+    # DET_samples = make_DET_dataset(DET_image_dir, DET_annotation_dir, class_to_idx, 'val')
 
-    DET_image_dir = os.path.join(root, 'Data/DET/val')
-    DET_annotation_dir = os.path.join(root, 'Annotations/DET/val')
-    DET_samples = make_DET_dataset(DET_image_dir, DET_annotation_dir, class_to_idx, 'val')
-
-    print(wnid_to_tags('n07555863'))
+    for tag in wnid_to_tags('n03769881'):
+        print(tag)
+        print(wordnet.synset_from_pos_and_offset('n', int(tag[1:])).lemmas()[0].name())

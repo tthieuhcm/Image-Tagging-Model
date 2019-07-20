@@ -1,0 +1,270 @@
+person, table, board, computer, bed
+aircraft, airplane, plane, bird, boat, kite
+table, building, glass, door, clock
+animal, mammal, antelope, camera, bird
+apple, food, fruit, table, sign, board, broccoli, cat
+person, clothing, suit, dress, board, shirt
+clothing, armor, building, table, knife, motorcycle, clock
+artichoke, vegetable, table, fruit, food, banana
+animal, mammal, bear
+person, clothing, shirt
+person, ball, game, uniform, baseball, control
+aircraft, balloon, plane, airplane, bird, boat
+fruit, banana, food, table
+building, bridge, train, house, barn, bench, sign
+barometer, clock, table
+person, board
+baseball, game, ball, orange, glove
+table, person, box, food, umbrella
+animal, mammal, bear, sheep
+bed, chair, table, desk, lamp
+animal, mammal, bison, sheep, camera
+boat, dog, motorcycle
+bottle, wine, refrigerator, table, food, dog, boat, sandwich, pizza
+bovine, animal, mammal, person, hay, cattle, ear
+person, kite, board
+table, person, food, coffee, bowl, shirt
+person, clothing, sign, shirt, suit, board
+table, toaster, food, coffee, cat
+building, table, bridge, boat, bird, bus, train, sign
+broccoli, food, sauce, table, bowl
+umbrella
+person, bubble, ball, shirt, kite
+food, table, burrito, fruit
+bus, building, orange
+vegetable, cabbage, table, food, banana, fruit, bowl, broccoli
+cabinet, furniture, table, tub
+person, building, camera
+person, sign, can, board
+light
+car, bed, motorcycle
+building, ride, table, umbrella, food, carousel, fruit, sign, boat, train
+bicycle, person, dog
+building, tower, flower, clock, bench, church, table, castle, bird
+cat, animal, dog, mirror, bed
+vegetable, cauliflower, food, table, board, fruit, knife, broccoli, sheep
+person, suit, dog, board
+person, suit, table
+furniture, chair, sofa, seat, table, cat
+cat, mammal, animal, cheetah, sheep, bench
+building, church, clock, tower, bench, sign
+clock, person, baseball, pole, ball
+building, person, wine, glass, suit, bus, shirt
+cup, table, coffee, food, sandwich, orange, soup, sauce, bowl
+clock, tower, building, sign
+food, bun, sandwich, dog, hotdog, table
+person, table, shirt, control, computer, game, ball
+corn, food, table, board, knife, broccoli, fruit, sandwich
+person, camera
+animal, crab, food, dessert, table, banana, fruit, dog
+boat, ship, bridge, truck, train, bird
+person, lotion, food, table, bed
+bird, animal
+cucumber, food, table, dog, fruit, bed, hotdog
+furniture, curtain, table, television
+flower, plant, vase, table, daisy, bear
+furniture, table, desk, computer
+cup, food, table, glass, dessert
+person, bed, bear
+animal, reptile, dinosaur, elephant
+cabinet, person, food, oven, refrigerator, stove, shirt
+boat, dock, pier, building, bridge
+person, dog, ball
+pool, animal, person, boat, dog, bird, table, bear
+cabinet, building, door, mirror, bed, refrigerator
+table, motorcycle
+bird, animal, goose, shore, orange, duck
+curtain, person, table, bed, shirt
+fence, bench, building, dwelling, chair, table
+animal, bird, eagle
+elephant, animal, mammal, horse
+table
+person, table, food, dog, game
+fence, sheep
+cabinet, furniture, box, refrigerator, bed, desk, table, door, oven, stove, computer
+bird, animal, flamingo, orange, board
+clothing, cat, suit
+person, table, kite, boat
+animal, mammal, fox, orange, dog
+frog, animal, table
+fungus, table, food, flower, umbrella
+building, train, refrigerator, platform, gate
+car, bed, table, bag, truck
+person, food, table, glass, wine, sunglasses, orange, shirt, pizza, bear
+orange, cat
+mammal, animal, goat, sheep
+person, gong, board, ball
+bird, goose, orange
+person, clothing, umbrella, dress, table, cat, bed
+weapon, person, motorcycle, baseball
+handcart
+harmonica
+person, harp, suit, orange
+bird, animal, hawk, bench
+hay, roof, sheep, umbrella
+person, headdress, clothing, baseball
+person, uniform, helmet
+bird, animal, heron, shore, food
+honeycomb, cup, table, fruit, banana, food, orange, bowl
+building, person, horse, truck
+food, dog, table, dish, sandwich, bun, tray, hotdog, banana
+building, banana, clock, tower, castle
+bird, hummingbird, animal, food, flower, fruit
+animal, hyena, mammal, dog, cat
+animal, table, knife, bird
+person, laptop, computer, table, board, suit, food, bed, shirt
+animal, mammal, kangaroo, dog, horse, sheep
+person, keyboard, computer, table, laptop, mouse, desk, board
+person, table, shirt, food, pan
+knot, cat, bed
+animal, koala, mammal, sheep, bear, cat, teddy, dog
+laptop, computer, table, desk, keyboard, mouse, screen, bed, bear
+cat, animal, mammal, leopard
+computer, library, table, desk, laptop, dog, cat
+person, laptop, computer, table, food, umbrella
+animal, mammal, cat, lion, dog
+lizard, reptile, animal, table, bird
+mammal, animal, sheep, llama, bird
+animal, lobster, table
+cabinet, table, building, cat, board
+lynx, animal, cat, mammal, dog
+building, food, table, box, truck, bag, fruit, shop, dog
+clothing, mask, table, cat
+cup, coffee, table, glass, mug, food, microwave, computer, cat, desk, keyboard, strainer
+animal, bird, meerkat, mammal, sheep
+building, memorial, table, bench, mountain, sheep, plane, tower
+clock, meter, computer, table, monitor, screen, desk, baseball
+person, shirt, laptop, computer, table
+person, table, computer, desk, laptop, food, microwave, oven, mouse, stove
+mirror, car, bus, dog
+person, monitor, television, screen, game, computer, control, shirt, table
+person, animal, mammal, bear, monkey
+building, motorcycle, bicycle, bench, table, sign
+mountain, plane, airplane
+mouse
+cup, coffee, table, computer, laptop, keyboard, desk, food, sandwich, soup, mouse, mug
+person, clothing, sweater, table, shirt
+necktie, person, shirt, suit, jacket, clothing, dress, bus
+person, orange, food, beverage, fruit
+flower, plant, vase, table, bench, sheep
+person, piano, food, organ, oven, table, computer
+person, board, bird, game, horse
+oven, food, door, microwave, glass, table
+person, table, board, food, laptop, computer, cat
+food, table, spoon, knife, pan, bowl, stove, fruit, board
+parachute, kite, board, boat
+bird, parrot, table, train
+bird, animal, pelican, goose, food, dock, shore, pier, bench, boat
+person, table, control, keyboard
+animal, bird, penguin, food, dog, table, sheep, cat
+food, vegetable, table, board, fruit, bowl, pot, pan, broccoli
+accordion, person, table, bear
+person, baseball, uniform, ball, knife
+person, game, ball, racket, basketball, shirt
+bench, fence
+bicycle, person, board, kite, shirt, boat
+brass, person, suit
+horse, dog
+person, guitar, board, suit
+table
+laptop, person, computer, table, desk
+person, animal, bird, orange, owl, table
+person, table, food, fruit, banana, glass, bowl, board
+person, food, table, dog, fruit, pizza, hotdog
+fish, bird, table, motorcycle, board
+person, baseball, uniform, violin, guitar, knife, board
+piano, table, desk, computer, laptop, stove, cat
+boat, bridge, dock, train
+sofa, bed, pillow, table, chair, lamp, orange
+pin, table, pan
+person, umbrella, table, ball
+guitar
+table, cup, glass, orange, bottle, computer, bowl, vase
+person, food, table, pizza, dog, restaurant, hotdog, fruit
+table, light, curtain
+lamp, table
+building, post, kite, dog, ball
+fence, table, bench, horse
+table, computer, desk, keyboard, monitor
+projector
+meter, car, table, bus, sign, train
+person, table, board, puzzle, computer
+rack, strainer
+game
+ray, fish, animal, bird, table, food, pool, glass, vase, umbrella
+reef, table, food, flower, orange, broccoli, bowl, coral, vase, umbrella
+cabinet, person, refrigerator, food, door, oven
+building, reservoir, sign, motorcycle, tower, train
+table, person, food, restaurant
+animal, mammal, cat, rodent, food, dog
+building, roof, house, clock, tower, church
+rug, furniture
+food, cup, table, dessert, bowl, coffee, fruit
+
+clothing, suit, shirt
+animal, bird, table
+screw, table
+mammal, seal, animal, boat, dog, board
+lamp, light, table, bed, clock, desk
+person, necktie, suit, shirt
+sheep, mammal, animal, camera
+boat, orange, ship, table, dock, bird
+shirt, baseball, person
+table, chair, furniture, computer, desk, stove
+sheep, plane, mountain, bird
+tool, umbrella, table, boat, baseball, board
+building, bench, church, clock, tower
+sign, pole
+light, sign, table, signal, motorcycle, truck
+person, clothing, board, dress, suit, computer
+sled, dog, bench, horse
+animal, slug, banana, table
+animal, snail, table, surface, food, bird, bowl
+reptile, snake, animal, bird
+person, suit, motorcycle
+food, table, soup, bowl, orange, broccoli
+animal
+table, knife, food, surface, bread, board, apple
+spring, mountain, plane, train
+fruit, squash, food, table, board, sandwich
+squirrel, mammal, animal, cat, bear, bird
+stereo, computer, keyboard, mouse
+food, table, bowl, tray, soup, pizza
+animal, bird, stork
+stove, cabinet, oven, table, door
+strainer, bicycle, table, chair, racket, banana, ball, cat, pan
+suit, person, necktie, clothing, sunglasses, board, sign
+spectacles, sunglasses, keyboard, cup, mirror
+bird, animal, swan, shore, fish
+person, clothing, sweater, jacket, shirt, suit, bow
+person, clothing, board, pool, suit
+swine, animal, mammal, dog, orange, bed, cat, sheep
+swing, pole, table, ball, baseball
+chair, table, furniture
+bear, teddy, table
+clock, table, desk, computer, keyboard, motorcycle, tower
+clock, tower, sign, boat
+mountain
+animal, mammal, person, dog, cat
+mountain, building, tower, plane, airplane
+truck, car, tractor, train, bed, motorcycle
+train, mountain, bridge, bus, car
+pan, table
+baseball, pole, sign, table, tripod, ball, game
+table, boat, dog, board, umbrella
+reptile, turtle, animal, bird, pool, mountain
+person, umbrella, baseball
+person, board, game, shirt, ball, bicycle
+person, uniform, clothing, baseball
+table, computer, keyboard, desk, laptop
+mountain, sheep, horse
+car, truck, van, bus
+vase, plant, table, flower, pot
+person, game, volleyball, fence, ball, racket
+person, camera, washer, shirt, mirror
+
+web
+bridge, boat, train, pier, dock, plane
+person, wine, glass, table, shirt, food
+animal, mammal, wolf, dog, bear, sheep, cat
+zebra, animal, mammal, horse

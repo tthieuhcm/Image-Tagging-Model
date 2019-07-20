@@ -8,7 +8,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 from torch.utils.data import Dataset
 
-from utils import make_classes, make_DET_dataset, make_CLS_LOC_dataset
+from new_utils import make_classes, make_DET_dataset, make_CLS_LOC_dataset
 
 
 class MIR_FLICKR_Dataset(Dataset):
@@ -61,6 +61,8 @@ class ImageNet_Dataset(Dataset):
         classes, class_to_idx = make_classes(map_dir)
         CLS_LOC_samples = make_CLS_LOC_dataset(CLS_LOC_image_dir, CLS_LOC_annotation_dir, class_to_idx, dataset_type)
         DET_samples     = make_DET_dataset(DET_image_dir, DET_annotation_dir, class_to_idx, dataset_type)
+        print(len(CLS_LOC_samples))
+        print(len(DET_samples))
 
         if len(CLS_LOC_samples) == 0 or len(DET_samples) == 0:
             raise(RuntimeError("Found 0 files in subfolders of: " + root + "\n"))
@@ -80,15 +82,17 @@ class ImageNet_Dataset(Dataset):
         path, target = self.samples[index]
         try:
             sample = self.loader(path)
-        except:
-            print(path)
-        if self.transform is not None:
-            sample = self.transform(sample)
+            if self.transform is not None:
+                sample = self.transform(sample)
 
-        targets_tensor = torch.zeros(len(self.classes))
-        for i in range(target.shape[0]):
-            targets_tensor[target[i]] = 1
-        return sample, targets_tensor
+            targets_tensor = torch.zeros(len(self.classes))
+            for i in range(target.shape[0]):
+                targets_tensor[target[i]] = 1
+            return sample, targets_tensor
+
+        except Exception as e:
+            print(path)
+            print(e)
 
     def __len__(self):
         return len(self.samples)

@@ -1,0 +1,30 @@
+accessory
+appliance
+area
+bar (spacebar)
+board (scoreboard)
+brace (neck brace)
+bun (bagel)
+container
+clip (hair slide)
+device
+dish (food/a dish)
+disk (hockey)
+display
+ear (spike, capitulum/real ear)
+equipment
+hat
+implement
+instrument
+jacket (book jacket/clothing)
+kite (animal/toy)
+orange (color/fruit)
+pool (rain barrel)
+potato (mashed/vegetable)
+plane (tool)
+plate
+produce
+rail (train/animal)
+ride (carousel)
+towel (paper towel)
+vessel

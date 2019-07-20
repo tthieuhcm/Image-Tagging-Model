@@ -81,7 +81,7 @@ def train_model(model, train, val, criterion, optimizer, scheduler, num_epochs=6
 
 
 if __name__ == "__main__":
-    batch_size = 64
+    batch_size = 4
     num_worker = 4
     root_dir = './ILSVRC'
     root_dir = '/media/tthieuhcm/6EAEFFD5AEFF93B5/Users/Administrator/Downloads/ILSVRC'
@@ -93,10 +93,10 @@ if __name__ == "__main__":
         root_dir,
         loader=default_loader,
         transform=transforms.Compose([
-            transforms.RandomResizedCrop(224),
-            transforms.RandomHorizontalFlip(),
-            transforms.ToTensor(),
-            normalize,
+                        transforms.RandomResizedCrop(224),
+                        transforms.RandomHorizontalFlip(),
+                        transforms.ToTensor(),
+                        normalize,
         ]),
         dataset_type='train')
 
@@ -113,11 +113,11 @@ if __name__ == "__main__":
         ImageNet_Dataset(root_dir,
                          loader=default_loader,
                          transform=transforms.Compose([
-                            transforms.Resize(256),
-                            transforms.CenterCrop(224),
-                            transforms.ToTensor(),
-                            normalize,
-                         ]),
+                                        transforms.Resize(256),
+                                        transforms.CenterCrop(224),
+                                        transforms.ToTensor(),
+                                        normalize,
+                                    ]),
                          dataset_type='val'),
         batch_size=batch_size,
         shuffle=False,
@@ -126,10 +126,12 @@ if __name__ == "__main__":
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-    model_ft = models.densenet121(pretrained=True)
-    num_ftrs = model_ft.classifier.in_features
-    model_ft.classifier = nn.Linear(num_ftrs, number_of_tags)
-    model = nn.Sequential(model_ft, nn.Sigmoid()).to(device)
+    original_model = models.densenet121(pretrained=True)
+
+    num_ftrs = original_model.classifier.in_features
+    original_model.classifier = nn.Linear(num_ftrs, number_of_tags)
+
+    model = nn.Sequential(original_model, nn.Sigmoid()).to(device)
 
     for param in model[0].parameters():
         param.requires_grad = False

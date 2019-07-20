@@ -1,0 +1,270 @@
+abacus
+aircraft, airplane
+altar, glass, furniture
+mammal, vertebrate, impala, antelope, gazelle
+apple, fruit, food
+clothing, uniform, dress, apron
+cuirass, breastplate
+artichoke, vegetable
+mammal, vertebrate, carnivore
+clothing, outerwear, backpack
+sports equipment
+balloon
+banana, fruit, food
+barn, shed, house, building, roof
+measuring instrument, tool, compass
+barrel
+baseball, ball, sports equipment
+grocery store, shopping cart
+vertebrate, bear, brown bear, mammal, carnivore
+bed, furniture, four-poster
+mammal, bison, vertebrate, bovine
+speedboat, boat
+bottle, beer bottle
+mammal, vertebrate, bovine, ox
+bow
+food, dish
+
+toaster, home appliance, bread, food, dish
+bridge
+broccoli, vegetable, food
+uniform
+
+dish, food, burrito
+bus, public transport, car
+cabbage, vegetable, food
+furniture, china cabinet
+camera
+
+candle
+car, grille
+carousel
+bicycle, jinrikisha
+castle, fortification, building
+mammal, vertebrate, cat, dog, carnivore
+cauliflower, food, vegetable, dish, broccoli
+musical instrument, cello
+ear
+furniture, studio couch, chair
+cheetah, mammal, vertebrate, leopard, carnivore
+building, place of worship, church
+watch, clock
+uniform
+cup, espresso, coffee
+obelisk, tower, memorial
+conch, musical instrument
+joystick
+corn, food, vegetable
+soap dispenser, bottle, nail
+crab, rock crab, dungeness crab, crustacean
+machine
+cream, lotion
+bird, vertebrate, coucal, cuckoo, pheasant
+cucumber, vegetable, food
+curtain, stage, theater curtain, heater
+daisy
+desk, furniture, table
+food, frozen dessert, ice cream, dish, dessert, cream
+
+dinosaur, triceratops
+dishwasher, kitchen appliance, home appliance, furniture
+bridge, boat, dock
+dog, golden retriever, carnivore, retriever
+dolphin
+door, glass, furniture
+drum, musical instrument
+bird, duck, vertebrate, goose, waterfowl
+chest, dumbbell, sports equipment
+yurt, house, building, roof, shed
+bird, bald eagle, vertebrate, bird of prey, eagle, kite
+elephant, vertebrate, mammal, indian elephant, african elephant
+wool
+footwear, home appliance, shoe
+fence
+chest of drawers, furniture, chiffonier
+bird, flamingo, vertebrate
+stocking, cat
+fountain
+mammal, fox, red fox, vertebrate, carnivore, dhole
+frog, amphibian, tree frog, true frog
+fungus, mushroom, agaric
+building, door, turnstile
+bag, tool
+beer glass
+glove, wool
+mammal, vertebrate
+gong, musical instrument
+bird, vertebrate, duck, goose, waterfowl
+gown, clothing, dress
+gun, rifle, firearm
+shopping cart, cart
+harmonica, musical instrument, wind instrument, electronic device
+harp, musical instrument
+bird, vertebrate, hawk, bird of prey, kite
+hay, fodder
+hat, clothing, cowboy hat
+helmet, clothing, sports equipment
+bird, vertebrate, heron, shorebird
+food, dish, honeycomb
+horse, mammal, vertebrate
+dish, food
+palace, building
+bird, hummingbird, wing
+hyena, mammal, vertebrate, carnivore
+dragonfly, insect, invertebrate, damselfly
+iron, home appliance
+kangaroo, mammal, vertebrate, marsupial, wallaby
+space bar, nail
+water bottle
+knot
+mammal, koala, vertebrate, marsupial
+laptop, screen, electronic device, computer, personal computer
+mammal, vertebrate, leopard, carnivore, jaguar
+bookcase, library, furniture, building
+
+mammal, lion, vertebrate, carnivore
+reptile, vertebrate, lizard
+mammal, llama, vertebrate
+american lobster, lobster, crayfish, invertebrate, spiny lobster, crustacean
+lock, padlock, door
+mammal, vertebrate, cat, lynx, carnivore
+grocery store, building, marketplace
+mask, helmet
+cup, measuring cup, beaker, mug, jug
+meerkat, vertebrate, mammal, carnivore, mongoose
+megalith
+measuring instrument, car, odometer, tool
+microphone
+electronic device, personal computer
+mirror
+screen, electronic device, desktop computer, personal computer
+mammal, vertebrate, new world monkey, macaque, primate, old world monkey, spider monkey
+moped
+mountain, ridge, valley
+mouse, electronic device
+cup, espresso
+necklace, chain
+clothing, suit
+citrus, food
+
+musical instrument, piano, keyboard, electronic device, organ
+ostrich, ratite, bird
+oven, rotisserie, kitchen appliance, home appliance
+tray
+food, dish, wok
+parachute
+bird, macaw, vertebrate, parrot
+bird, pelican, vertebrate, seabird
+pen
+penguin, vertebrate, bird
+food, bell pepper, vegetable
+accordion, musical instrument
+knife, hatchet, tool
+basketball
+bench, furniture, table
+bicycle
+musical instrument, wind instrument, trombone
+camel, mammal, vertebrate, arabian camel
+guitar, musical instrument, acoustic guitar
+jellyfish
+laptop, computer, electronic device
+owl, bird of prey, bird
+pineapple, fruit, food
+food, pomegranate, fruit
+fish, tiger shark, requiem shark, shark, great white shark, cartilaginous fish
+violin, musical instrument
+piano, musical instrument, keyboard, electronic device
+
+pillow, furniture, cushion
+safety pin
+wheel, pinwheel
+musical instrument
+pitcher, jug, glass
+food, dish, pizza
+stage, curtain, heater, theater curtain
+table, furniture
+maypole, pole
+vase
+printer, electronic device, photocopier
+electronic device
+gas pump, machine
+
+furniture
+racket, sports equipment
+stingray, fish, cartilaginous fish
+coral reef, reef, coral, fish
+refrigerator, home appliance, kitchen appliance, furniture, door
+water tower
+restaurant, table, building
+mouse, mammal, vertebrate, rodent, fare
+roof, building
+prayer rug, rug, stole
+food, dish, dessert
+electronic device, measuring instrument
+scarf, stole, clothing, wool
+scorpion, invertebrate, arthropod, crayfish, arachnid
+screw, fastener
+seal, vertebrate, mammal
+lampshade, lamp, light, table
+water bottle, bottle
+mammal, sheep, vertebrate
+container ship, boat, cargo ship, ship
+clothing, jersey
+building, furniture, barber chair, chair
+
+tool, shovel, hatchet
+stupa, place of worship, building, tower, monastery
+street sign, sign
+traffic light, light
+clothing, dress
+mammal, dog, sled dog
+slug, snail, invertebrate
+snail, slug, invertebrate
+reptile, snake, mamba
+snowmobile, helmet
+food, dish, soup
+spider, tarantula, invertebrate, arachnid, wolf spider, insect, arthropod
+spoon, wooden spoon, kitchen utensil, tool, ladle
+geyser, spring, mountain
+food, vegetable, summer squash, cucumber, zucchini, squash
+squirrel, vertebrate, mammal, fox squirrel
+ipod, electronic device
+dish, food, soup
+bird, white stork, stork, vertebrate, shorebird, crane, pelican
+stove, home appliance, kitchen appliance
+kitchen utensil
+clothing, suit, outerwear, jacket
+sunglasses
+bird, swan, vertebrate, black swan, waterfowl, duck
+clothing, outerwear, jacket, top, sweater
+clothing, bikini, undergarment
+
+swing
+furniture, chair, table
+bear, koala
+telephone
+radio telescope, electronic device
+tent, mountain, footwear
+tiger, mammal, vertebrate, carnivore
+tower, beacon, promontory, shore
+tractor
+train, public transport
+tray
+tripod
+bathtub
+vertebrate, sea turtle, turtle, reptile
+umbrella, outerwear
+unicycle, bicycle, sports equipment, wheel
+military uniform, uniform
+kitchen utensil
+mountain, valley
+car, police van, van
+vase, table
+volleyball, sports equipment
+home appliance
+watch
+spider web, invertebrate
+wheel, paddlewheel, bridge, machine
+red wine, glass, wine
+mammal, vertebrate, wolf, dog
+zebra, mammal, vertebrate

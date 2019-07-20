@@ -1,0 +1,270 @@
+abacus
+aircraft, airplane, boat, vehicle
+altar, building, furniture, structure
+animal, mammal, antelope
+food, apple, fruit
+clothing, coat
+armor, clothing, footwear
+food, vegetable, artichoke, fruit
+animal, mammal, canine, dog, bear, badger
+person, canine, dog, clothing, coat, skirt, sweater
+animal, ball, clothing, headdress, helmet
+aircraft, ball, balloon, parachute, vehicle
+food, food, vegetable, squash, banana, fruit
+barn, building, structure
+barometer
+animal, clothing, footwear
+animal, ball, baseball
+basket, clothing
+animal, mammal, canine, dog
+bed, chair, furniture, lamp, seat, sofa, table
+animal, mammal, bovine, cattle, bison, sheep, camel
+animal, boat, vehicle
+bottle, toiletry
+animal, mammal, canine, dog, lion, bovine, cattle, cart
+animal, bow
+
+clothing
+toaster
+bridge, crane, structure, vehicle
+animal, food, vegetable, broccoli
+clothing
+animal, bubble, ball
+food, burrito
+bus, car
+animal, food, vegetable, cabbage
+cabinet, furniture
+person, clothing, headdress
+structure, sign
+candle, lamp, light
+car, clothing
+carousel, structure
+car, cart
+building, castle, house, structure
+animal, mammal, canine, dog
+animal, food, vegetable, cauliflower
+person, cello, guitar, microphone, violin
+clothing, necktie
+chair, furniture, seat, sofa
+animal, mammal, cheetah
+building, church, structure
+clock, clothing, timepiece
+
+food, bowl, mug, beverage, coffee
+building, column, structure
+animal, conch, slug, crab, food, vegetable
+food, clothing
+corn, fruit
+dumbbell, toiletry
+animal, reptile, turtle, crab
+boat, crane, machine, vehicle
+bottle, cream, lotion, toiletry
+animal, bird, cuckoo
+animal, food, vegetable, squash, cucumber, pepper
+bed, blind, curtain, furniture, seat, sofa
+animal, plant, bird, flower, daisy
+furniture, table
+food, dessert
+clothing, diaper
+animal, reptile, lizard, dinosaur, mammal
+dishwasher, structure
+dock, landing, pier, structure, vehicle
+animal, mammal, canine, dog
+animal, fish, clothing, headdress
+cabinet, furniture, structure
+drum
+animal, bird, goose
+clothing, dumbbell
+building, dwelling, furniture, roof, structure
+animal, bird, hawk, eagle
+animal, mammal, canine, dog, elephant
+animal, mammal, canine, dog, bag, fabric, furniture
+clothing, furniture
+animal, mammal, canine, dog
+box, file, furniture, microwave, stove, structure
+animal, bird, flamingo
+clothing, footwear, skirt, swimsuit
+fountain, structure
+animal, mammal, canine, fox
+animal, frog, reptile, snake
+animal, food, vegetable, fungus
+person, gate, shop, structure
+bag, basket, gear, snowmobile
+food, clothing, dessert
+clothing, fabric, glove, sweater
+animal, mammal, canine, goat
+gong
+animal, bird, goose, crane
+person, clothing, dress, gown, skirt
+gun, weapon
+
+clock, harmonica, structure, timepiece
+chair, harp
+animal, bird, hawk
+animal, mammal, monkey, roof
+clothing, headdress
+clothing, headdress, helmet
+animal, bird, heron
+honeycomb, food, citrus, fruit
+animal, mammal, canine, dog, horse, cart
+food, crab, bread, sandwich, hotdog
+building, house, structure
+animal, bird, hummingbird, insect
+animal, mammal, canine, hyena, cheetah
+animal, insect
+clothing
+animal, mammal, kangaroo, canine
+abacus, computer, keyboard, machine
+clothing, tool
+animal, mammal, canine, dog, knot
+animal, mammal, koala, canine
+computer, laptop, machine, monitor, screen, stereo, television
+animal, mammal, leopard, cheetah
+building, furniture, library, structure
+person, clothing
+animal, mammal, canine, dog, wolf, lion
+animal, reptile, lizard
+animal, bird, mammal, canine, dog, llama
+animal, crab, lobster
+box, lock, opener, tool
+animal, mammal, canine, dog, wolf, cat
+machine, marketplace, shop, structure
+mask, mask, shaker
+food, measure
+animal, mammal, canine, dog, meerkat, monkey
+fence, memorial, structure
+meter, timepiece
+clothing, toiletry
+furniture, table
+mirror, timepiece
+
+animal, mammal, monkey
+motorcycle
+structure, mountain
+mouse
+food, bowl, mug, beverage, coffee
+clothing, fabric, necklace, sweater
+clothing, gown, necktie
+food, candle, toiletry, dessert, fruit
+animal, insect, food
+piano
+animal, bird, ostrich, mammal, canine, dog, camel
+computer, furniture, machine
+reptile, snake
+food, bowl, pan, utensil, food, stew, vegetable
+parachute, shrine, structure, vehicle
+animal, bird, parrot
+animal, bird, goose, seabird, pelican
+pen
+animal, bird, mammal, canine, dog
+marketplace, food, vegetable, cucumber, pepper
+accordion
+
+person, ball, basketball
+animal, mammal, bench, tool
+animal, bicycle, unicycle
+brass, toiletry
+animal, mammal, canine, dog, camel, cart
+clothing, guitar
+person, animal, mammal
+computer
+animal
+clothing, pineapple, fruit
+person, animal, food, clothing, toiletry
+animal, fish
+fish, cello, clothing, headdress, violin
+furniture, piano
+structure, vehicle
+animal, bag, clothing, furniture, pillow, sofa
+opener, pen, pin, tool
+person, clothing
+accordion, guitar, pipe
+food, beverage
+food
+blind, building, curtain, fountain, structure
+chair, furniture, lamp
+ball, post, swing
+pitcher, pot, utensil, vase
+computer, laptop, machine, printer
+projector
+machine
+clothing, game, puzzle
+animal, rack, structure
+clothing, racket
+animal, shark, ray, fish, clothing
+animal, fish, structure, reef
+furniture, structure
+building, reservoir, structure
+person, chair, furniture, restaurant, seat, structure, table
+animal, mammal, cat, rodent
+roof, structure
+chair, furniture, rug
+food, footwear, sauce
+computer, machine, scale
+animal, clothing, shirt
+animal, scorpion, spider, insect
+snake, screw
+animal, mammal, seal, canine, dog
+furniture, lamp, shade
+animal, clothing
+animal, mammal, canine, dog, sheep, monkey
+ship, structure, vehicle
+blind
+structure
+animal, structure, shore
+ax
+building, roof, shrine, structure, tower
+sign
+signal, light, fruit
+clothing, footwear, skirt, swimsuit
+animal, mammal, canine, dog, sled
+animal, reptile, slug
+animal, snail
+animal, reptile, snake
+clothing, headdress, helmet, snowmobile
+food, bowl, soup
+animal, spider, insect
+ax, furniture, spoon, tool
+structure, mountain, spring
+food, vegetable, squash, cucumber
+animal, mammal, fox, rodent, squirrel, monkey
+machine, stereo
+food, bowl, utensil, stew, pizza
+animal, bird, stork
+stove, structure
+strainer
+clothing, suit
+mug, pan, spectacles, sunglasses, utensil
+animal, bird, swan
+bag, clothing, sweater
+clothing, footwear, skirt, swimsuit
+animal, mammal, swine
+swing, weapon
+chair, furniture, seat, structure, table, table
+animal, teddy
+telephone
+structure, telescope, vehicle
+bag, tent, vehicle
+animal, mammal, canine, tiger
+castle, structure, tower
+machine, tool, tractor
+car
+knife
+rack, tool, tripod, weapon
+furniture, seat
+animal, bird, reptile, turtle, lizard
+clothing
+animal, mammal, canine, dog, unicycle
+clothing, skirt, uniform
+clothing, microphone
+animal, structure, valley
+bus, car, truck, van
+animal, bird, ball, vase
+ball, racket, volleyball
+
+machine, timepiece
+animal, mammal, web
+machine, machine, wheel
+person, clothing
+animal, mammal, canine, dog, wolf
+animal, mammal, zebra, antelope
